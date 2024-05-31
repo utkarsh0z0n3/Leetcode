@@ -1,0 +1,34 @@
+first code using frequency 
+class Solution {
+    public int[] singleNumber(int[] nums) {
+      HashMap<Integer, Integer> map = new HashMap<>();
+      int n = nums.length;
+      int[] ans = new int[2];
+      for(int num: nums)
+      {
+        map.put(num,map.getOrDefault(num,0)+1);
+      }
+    
+      int z=0;
+      for(int i : map.keySet())
+      {
+        if(map.get(i)==1)
+        {
+            ans[z++] = i;
+        }
+        System.out.println("key" + i + "val " +map.get(i));
+      }
+     
+        return ans;
+    }
+}
+
+
+###############################################################################################
+2nd using bit manipulation
+## 0 ^ x  = x 
+[1,2,2,1,3] then xor of every number gives the non pair number
+
+code
+
+ 
